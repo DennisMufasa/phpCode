@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maam</title>
+
+    <meta name="viewPort" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+    <style>
+        .container{
+            padding-top: 100px;
+        }
+
+    </style>
+
+    <script>
+        //this is to make sure the script does not run before the page loads which may cause bugs.
+        $(document).ready(function () {
+            $("button").click(function () {
+               $(this).hide();
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <h3 class="navbar-brand text-primary"><a id="heading" href="http://localhost:63342/phpCode/html.html?_ijt=smjpuk17uvhj5m0qbjd3p8qn1a" class="text-primary">myWebApp</a></h3>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    About Us <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Our Mission(<em class="text-info">what we are doing!</em>)</a></li>
+                    <li><a href="#">Our Vision(<em class="text-info">why we are doing it!</em>) </a></li>
+                    <li><a href="#">Our Motto(<em class="text-info">why we can not-not do it!</em>)</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Contact Us <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Front Desk</a></li>
+                    <li><a href="#">Admin(<em class="text-info">don't abuse</em>)</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+        </ul>
+
+            <form class="navbar-form navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="search">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h4>JQuery Playground</h4>
+    <div class="col-xs-6">
+        <div class="well">
+            <button type="button" class="btn btn-default"></button>
+            <button type="button" class="btn btn-default"></button>
+            <button type="button" class="btn btn-default"></button>
+
+        </div>
+
+    </div>
+    <div class="col-xs-6">
+        <div class="well">
+
+            <button type="button" class="btn btn-default"></button>
+            <button type="button" class="btn btn-default"></button>
+            <button type="button" class="btn btn-default"></button>
+        </div>
+    </div>
+
+    <canvas id="myCanvas" width="500" height="500" style="border: solid black">
+
+
+    </canvas>
+
+</div>
+
+<script>
+
+    var canvas= document.getElementById("myCanvas");
+    var ctx=canvas.getContext("2d");
+    ctx.fillStyle="#C80";
+    ctx.fillRect(5,5,150,75);
+
+    //line
+    ctx.moveTo(165,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+//circle
+    ctx.beginPath();
+    ctx.arc(250,250,50,0,2*Math.PI);
+    ctx.stroke();
+
+
+</script>
+
+
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>

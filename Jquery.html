@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+
+    <meta name="viewPort", content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="w3css/w3.css">
+
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#parag1").hide();
+
+            $("#parag4").hide();
+
+            $("button").click(function () {
+                $("#parag1").fadeIn(1000);
+            });
+
+            $("#btn1").click(function () {
+                $("#parag1").hide(1000, function () {
+                    alert("Information is now hidden");
+                });
+            });
+
+            $("#parag2").mouseenter(function () {
+                alert('You\'ve entered paragraph 1');
+            });
+
+            $("#parag3").mouseenter(function () {
+                alert('You\'ve entered paragraph 2')
+            });
+
+            $("#btn4").click(function () {
+                $("#parag4").toggle(1000);
+            });
+
+            $("#btn2").click(function () {
+                $("#myDiv").animate({left: '250px',
+                                    opacity: '0.5',
+                                    height: '150px',
+                                    width: '150px'},5000);
+            });
+
+            $("#btn3").click(function () {
+                $("#myDiv").stop();
+            });
+
+            $("#btn5").click(function () {
+                $("#parag5").css("color", "red").slideUp(3000).slideDown(3000);
+            });
+
+        });
+    </script>
+
+
+</head>
+<body>
+
+<div class="w3-container">
+    <h3 class="w3-text-blue">JQuery Playground</h3>
+
+    <button class="w3-button w3-blue ">Get Started</button>
+    <p id="parag1" class="w3-text-red">Welcome to the JQuery playground. Click the button below to hide this information.</p>
+    <br><br>
+    <button id="btn1" class="w3-button w3-round w3-green">Hide Info</button>
+    <br><br>
+    <div class="w3-cell-row" style="width: 75%">
+        <div class="w3-container w3-blue w3-cell">
+            <p id="parag2" class="w3-text-yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A accusantium alias aliquam culpa cum debitis earum est excepturi fugiat incidunt pariatur
+                possimus quos rem sed, similique tenetur velit veniam voluptatem.</p>
+        </div>
+
+        <div class="w3-container w3-cell w3-red">
+            <p id="parag3" class="w3-text-yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consectetur delectus esse, eum
+                excepturi facere fugit incidunt iure laborum laudantium minus nemo quia quibusdam quidem repudiandae,
+                similique! Magni, soluta!</p>
+        </div>
+
+    </div>
+    <br><br>
+    <button id="btn4" class="w3-button w3-red">Toogle</button>
+    <br><br>
+    <p id="parag4">The paragraph that appears and disappears on clicking toogle button!</p>
+
+    <button id="btn2" class="w3-button w3-yellow">Start Animation</button>
+    <button id="btn3" class="w3-button w3-yellow">Stop Animation</button>
+
+</div>
+
+<div class="w3-container">
+    <br><br>
+    <div id="myDiv" style="background: #c9302c; width: 100px; height: 100px; position: absolute"></div>
+    <br><br>
+</div>
+
+<div class="w3-container" style="margin-top: 100px">
+        <button id="btn5" class="w3-button w3-green">Click Me!</button>
+
+        <br><br>
+        <p id="parag5">Paragraph with a little content.</p>
+</div>
+
+
+</body>
+</html>
